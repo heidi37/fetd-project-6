@@ -5,7 +5,6 @@ const mainContainer = document.querySelector('.main-container');
 const overlay = document.getElementById('overlay');
 
 
-
 var phrases = [
     'GAME OF THRONES',
     'ORANGE IS THE NEW BLACK',
@@ -56,15 +55,18 @@ addPhraseToDisplay(phraseArray);
 function checkLetter(letterguess) {
 //get elements with the class of letter
 const letters = document.getElementsByClassName('letter');
+let matchLetter = null;
     for (i = 0; i < letters.length; i++) {
         if (letterguess === letters[i].textContent) {
             letters[i].classList.add('show');
-            // const match = letterguess;
-            // return match;
-        } else {
-            // return null;
-        }
+            matchLetter = letterguess;
+        } 
     }
+
+    console.log(matchLetter);
+    return matchLetter;
+
 }
 
-checkLetter('E');
+checkLetter('Z');
+
