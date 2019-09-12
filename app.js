@@ -5,6 +5,8 @@ const mainContainer = document.querySelector('.main-container');
 const overlay = document.getElementById('overlay');
 
 
+
+
 var phrases = [
     'GAME OF THRONES',
     'ORANGE IS THE NEW BLACK',
@@ -62,11 +64,16 @@ let matchLetter = null;
             matchLetter = letterguess;
         } 
     }
-
-    console.log(matchLetter);
     return matchLetter;
-
 }
 
-checkLetter('Z');
+qwerty.addEventListener('click', (event) => {
+  const buttonValue = event.target.textContent;
+  if(event.target.tagName === 'BUTTON'){
+    checkLetter(buttonValue.toUpperCase());
+    event.target.classList.add('chosen');
+  }
+});
+
+
 
