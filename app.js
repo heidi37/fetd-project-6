@@ -28,8 +28,6 @@ function getRandomPhraseAsArray(arr){
     return splitPhrase;
 }
 
-
-
 function addPhraseToDisplay(arr){
     
     // loop through splitPhrase array
@@ -54,3 +52,19 @@ function addPhraseToDisplay(arr){
 
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
+
+function checkLetter(letterguess) {
+//get elements with the class of letter
+const letters = document.getElementsByClassName('letter');
+    for (i = 0; i < letters.length; i++) {
+        if (letterguess === letters[i].textContent) {
+            letters[i].classList.add('show');
+            // const match = letterguess;
+            // return match;
+        } else {
+            // return null;
+        }
+    }
+}
+
+checkLetter('E');
