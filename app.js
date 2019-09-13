@@ -4,7 +4,6 @@ const buttonStart = document.querySelector('.btn__reset');
 const mainContainer = document.querySelector('.main-container');
 const overlay = document.getElementById('overlay');
 
-
 var missed = 0;
 
 var phrases = [
@@ -55,9 +54,9 @@ const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
 
 function checkLetter(letterguess) {
-//get elements with the class of letter
-const letters = document.getElementsByClassName('letter');
-let letterFound = null;
+    //get elements with the class of letter
+    const letters = document.getElementsByClassName('letter');
+    let letterFound = null;
     for (i = 0; i < letters.length; i++) {
         if (letterguess === letters[i].textContent) {
             letters[i].classList.add('show');
@@ -67,17 +66,17 @@ let letterFound = null;
     if (letterFound === null){
         missed +=1;
     }
-    return letterFound; //might not need
+    return letterFound;
 }
 
 qwerty.addEventListener('click', (event) => {
-  const buttonValue = event.target.textContent;
-  if(event.target.tagName === 'BUTTON'){
-    checkLetter(buttonValue.toUpperCase());
-    event.target.classList.add('chosen');
-    event.target.setAttribute('disabled', '');
-  }
-  checkWin();
+    const buttonValue = event.target.textContent;
+    if(event.target.tagName === 'BUTTON'){
+        checkLetter(buttonValue.toUpperCase());
+        event.target.classList.add('chosen');
+        event.target.setAttribute('disabled', '');
+    }
+    checkWin();
 });
 
 function checkWin() {
@@ -94,7 +93,6 @@ function checkWin() {
     buttonStart.addEventListener('click', () => {
         location.reload();  
     });
-    
 };
 
 
