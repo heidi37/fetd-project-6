@@ -92,7 +92,7 @@ function checkWin() {
         mainContainer.appendChild(overlay);
     }
     buttonStart.addEventListener('click', () => {
-        location.reload();
+        location.reload();  
     });
     
 };
