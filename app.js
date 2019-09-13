@@ -4,8 +4,7 @@ const buttonStart = document.querySelector('.btn__reset');
 const mainContainer = document.querySelector('.main-container');
 const overlay = document.getElementById('overlay');
 
-
-
+var missed = 0;
 
 var phrases = [
     'GAME OF THRONES',
@@ -57,14 +56,18 @@ addPhraseToDisplay(phraseArray);
 function checkLetter(letterguess) {
 //get elements with the class of letter
 const letters = document.getElementsByClassName('letter');
-let matchLetter = null;
+let letterFound = null;
     for (i = 0; i < letters.length; i++) {
         if (letterguess === letters[i].textContent) {
             letters[i].classList.add('show');
-            matchLetter = letterguess;
+            letterFound = letterguess;
         } 
     }
-    return matchLetter;
+    if (letterFound === null){
+        missed +=1;
+        console.log(missed);
+    }
+    return letterFound; //might not need
 }
 
 qwerty.addEventListener('click', (event) => {
@@ -72,8 +75,26 @@ qwerty.addEventListener('click', (event) => {
   if(event.target.tagName === 'BUTTON'){
     checkLetter(buttonValue.toUpperCase());
     event.target.classList.add('chosen');
+    event.target.setAttribute('disabled', '');
   }
+  checkWin();
 });
+
+function checkWin() {
+    const allLetters = document.querySelectorAll('.letter');
+    const shownLetters = document.querySelectorAll('.show');
+    if(allLetters.length === shownLetters.length){
+        overlay.className = 'win';
+        mainContainer.appendChild(overlay);
+    }
+    if(missed === 5){
+        overlay.className = 'lose';
+        mainContainer.appendChild(overlay);
+    }
+    buttonStart.addEventListener('click', () => {
+        location.reload();
+    });
+};
 
 
 
