@@ -4,6 +4,7 @@ const buttonStart = document.querySelector('.btn__reset');
 const mainContainer = document.querySelector('.main-container');
 const overlay = document.getElementById('overlay');
 
+
 var missed = 0;
 
 var phrases = [
@@ -65,7 +66,6 @@ let letterFound = null;
     }
     if (letterFound === null){
         missed +=1;
-        console.log(missed);
     }
     return letterFound; //might not need
 }
@@ -94,6 +94,7 @@ function checkWin() {
     buttonStart.addEventListener('click', () => {
         location.reload();
     });
+    
 };
 
 
