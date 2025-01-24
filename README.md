@@ -35,7 +35,7 @@ A browser-based word guessing game developed as part of the Team Treehouse Techd
 - **HTML5**: Structure of the game interface.
 - **CSS3**: Styling and layout.
 
-<img src="https://img.shields.io/badge/javascript-black?style=flat-square&logo=javascript" alt="javascript badge" height="50"> <img src="https://img.shields.io/badge/HTML-black?style=flat-square&logo=html5" alt="HTML5 badge" height="50"> <img src="https://img.shields.io/badge/CSS-black?style=flat-square&logo=css3" alt="CSS3 badge" height="50"> <img src="https://img.shields.io/badge/bootstrap-black?style=flat-square&logo=bootstrap" alt="bootstrap badge" height="50">
+<img src="https://img.shields.io/badge/javascript-black?style=flat-square&logo=javascript" alt="javascript badge" height="50"> <img src="https://img.shields.io/badge/HTML-black?style=flat-square&logo=html5" alt="HTML5 badge" height="50"> <img src="https://img.shields.io/badge/CSS-black?style=flat-square&logo=css3" alt="CSS3 badge" height="50">
 
 ## Project Structure
 
