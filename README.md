@@ -1,7 +1,3 @@
-Certainly! Here's a draft for your repository's README:
-
----
-
 # JavaScript Phrase Guessing Game
 
 A browser-based word guessing game developed as part of the Team Treehouse Techdegree program. Players attempt to guess a hidden phrase by selecting letters, with a limited number of incorrect guesses allowed.
