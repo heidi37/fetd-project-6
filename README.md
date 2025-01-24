@@ -12,8 +12,8 @@ A browser-based word guessing game developed as part of the Team Treehouse Techd
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/heidi37/fetd-project-6.git
-   cd fetd-project-6
+   git clone https://github.com/heidi37/guessing-game.git
+   cd guessing-game
    ```
 
 2. **Open in Browser**:
@@ -37,6 +37,13 @@ A browser-based word guessing game developed as part of the Team Treehouse Techd
 - `app.js`: Contains the game logic.
 - `styles.css`: Styling for the game interface.
 - `images/`: Directory containing image assets.
+
+- ## Future Improvements
+
+- move the phrases array to server-side code so users can't see it with the developer tools
+- limit the number of guesses a user can make
+- let them guess the word before filling in all the letters, add a "guess now" field
+- tally a score of successful guesses
 
 ## Acknowledgments
 
